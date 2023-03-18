@@ -66,7 +66,6 @@ class Server:
                 if recv_data is None:
                     return
                 image.image_bytes.append(recv_data)
-                logging.debug(image.size)
                 image.size -= len(recv_data)
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
