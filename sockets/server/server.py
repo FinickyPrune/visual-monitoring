@@ -3,7 +3,8 @@ import pickle
 import socket
 import selectors
 import types
-from image import ImageRawData
+from models.image import ImageRawData
+from camera_manager.camera_manager import CameraManager
 
 sel = selectors.DefaultSelector()
 
@@ -12,7 +13,7 @@ PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 
 class Server:
-    files = dict()
+    camera_manager = CameraManager()
 
     def __init__(self):
         host, port = HOST, PORT
@@ -44,24 +45,25 @@ class Server:
         data = types.SimpleNamespace(addr=addr, inb=b"", outb=b"")
         events = selectors.EVENT_READ
         sel.register(conn, events, data=data)
-        self.files[addr] = ImageRawData()
+        self.camera_manager.register_camera(addr)
 
     def server_connection(self, key, mask):
         sock = key.fileobj
         addr = sel.get_key(sock).data.addr
         if mask & selectors.EVENT_READ:
-            if self.files[addr].image_bytes is None:
+            raw_image = self.camera_manager.image_for_addr(addr)
+            if raw_image.image_bytes is None:
                 image_length_bytes = sock.recv(4)
                 if image_length_bytes:
-                    self.files[addr] = ImageRawData([], int.from_bytes(image_length_bytes, 'big'))
-                    logging.debug(int.from_bytes(image_length_bytes, 'big'))
+                    self.camera_manager.update_image(addr, ImageRawData([], int.from_bytes(image_length_bytes, 'big')))
                 else:
                     logging.info(f"Closing connection to {sel.get_key(sock).data.addr}")
                     sel.unregister(sock)
+                    self.camera_manager.unregister_camera(addr)
                     sock.close()
 
             else:
-                image = self.files[addr]
+                image = self.camera_manager.image_for_addr(addr)
                 recv_data = sock.recv(min(4096, image.size))
                 if recv_data is None:
                     return
@@ -69,8 +71,8 @@ class Server:
                 image.size -= len(recv_data)
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
-                    image_dto.image.save(str(addr) + "_" + image_dto.timestamp + '.jpg')
-                    self.files[addr] = ImageRawData()
+                    image_dto.image.save(self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp + '.jpg')
+                    self.camera_manager.update_image(addr, ImageRawData())
 
 
 if __name__ == '__main__':

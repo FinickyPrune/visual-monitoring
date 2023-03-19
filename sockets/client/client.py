@@ -6,7 +6,7 @@ from math import ceil
 
 from PIL import Image
 from datetime import datetime
-from image import ImageDto
+from models.image import ImageDto
 
 CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output"
 BYTE_CHUNK = 4096
