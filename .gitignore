@@ -7,6 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 sockets/.idea
+sockets/data/hdf5
 
 *.pyc
-*.h5
