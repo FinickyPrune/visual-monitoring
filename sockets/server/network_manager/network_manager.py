@@ -1,10 +1,12 @@
 import logging
 import pickle
-import socket
 import selectors
+import socket
 import types
+
 from models.image import ImageRawData
-from camera_manager.camera_manager import CameraManager
+from server.camera_manager.camera_manager import CameraManager
+from server.image_storage.image_storage_interface import ImageStorageInterface
 
 sel = selectors.DefaultSelector()
 
@@ -12,10 +14,13 @@ HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 
-class Server:
+class NetworkManager:
     camera_manager = CameraManager()
+    image_storage: ImageStorageInterface
 
-    def __init__(self):
+    def __init__(self, image_storage):
+        self.image_storage = image_storage
+
         host, port = HOST, PORT
         lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         lsock.bind((host, port))
@@ -71,10 +76,8 @@ class Server:
                 image.size -= len(recv_data)
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
+                    self.image_storage.save(image_dto.image,
+                                            self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp)
+
                     image_dto.image.save(self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp + '.jpg')
                     self.camera_manager.update_image(addr, ImageRawData())
-
-
-if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG)
-    server = Server()

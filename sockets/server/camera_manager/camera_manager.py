@@ -2,6 +2,7 @@ import uuid
 import logging
 from models.image import ImageRawData
 
+
 class CameraManager:
     camera_dict = dict()
 

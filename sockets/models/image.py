@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from typing import BinaryIO
 from PIL import Image
 
 
