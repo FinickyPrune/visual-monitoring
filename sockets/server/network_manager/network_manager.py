@@ -77,7 +77,7 @@ class NetworkManager:
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
                     self.image_storage.save(image_dto.image,
-                                            self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp)
+                                            self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp.strftime('%F %T.%f'))
 
-                    image_dto.image.save(self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp + '.jpg')
+                    image_dto.image.save(self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp.strftime('%F %T.%f') + '.jpg')
                     self.camera_manager.update_image(addr, ImageRawData())

@@ -40,9 +40,8 @@ class Client:
 
     def send_image(self, path):
         image = Image.open(path)
-        timestamp = datetime.utcnow().strftime('%F %T.%f')
 
-        dto_dump = pickle.dumps(ImageDto(timestamp, image))
+        dto_dump = pickle.dumps(ImageDto(datetime.utcnow(), image))
         dto_length_bytes = len(dto_dump).to_bytes(4, 'big')
 
         self.socket.send(dto_length_bytes)

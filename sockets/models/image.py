@@ -1,12 +1,12 @@
 from dataclasses import dataclass
+from datetime import datetime
 from PIL import Image
 
 
 @dataclass
 class ImageDto:
-    timestamp: str
+    timestamp: datetime
     image: Image
-
 
 @dataclass
 class ImageRawData:
