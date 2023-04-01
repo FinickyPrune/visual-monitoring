@@ -1,3 +1,4 @@
+import datetime
 import logging
 import os
 import numpy as np
@@ -17,7 +18,6 @@ class HDF5ImageStorage(ImageStorageInterface):
         self.hdf5_dir.mkdir(parents=True, exist_ok=True)
         for file in os.listdir(self.hdf5_dir):
             self.file_names.append(file.title()[:-3])
-        logging.info(self.file_names)
 
     def save(self, image, name):
         count = len(os.listdir(self.hdf5_dir))
@@ -33,6 +33,15 @@ class HDF5ImageStorage(ImageStorageInterface):
         file = h5py.File(self.hdf5_dir / f"{image_name}.h5", "r+")
         image = np.array(file["/image"]).astype("uint8")
         return Image.fromarray(image)
+
+    def load_all(self) -> ([Image], [str]):
+        images: [Image] = []
+        file_names: [str] = []
+        for file in os.listdir(self.hdf5_dir):
+            f = h5py.File(self.hdf5_dir / file, "r+")
+            images.append(Image.fromarray(np.array(f["/image"]).astype("uint8")))
+            file_names.append(file[:-3])
+        return images, file_names
 
     def files_names(self) -> [str]:
         return self.file_names
