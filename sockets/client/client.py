@@ -7,12 +7,7 @@ from math import ceil
 from PIL import Image
 from datetime import datetime
 from models.image import ImageDto
-
-CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output"
-BYTE_CHUNK = 4096
-
-HOST = "127.0.0.1"  # The server's hostname or IP address
-PORT = 65432  # The port used by the server
+from utils.constants import HOST, PORT, CAMERA_OUTPUT_PATH, BYTE_CHUNK
 
 
 class Client:

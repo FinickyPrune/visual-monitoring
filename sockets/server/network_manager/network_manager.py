@@ -7,11 +7,9 @@ import types
 from models.image import ImageRawData
 from server.camera_manager.camera_manager import CameraManager
 from server.image_storage.image_storage_interface import ImageStorageInterface
+from utils.constants import HOST, PORT, TIMESTAMP_FORMAT
 
 sel = selectors.DefaultSelector()
-
-HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
-PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 
 class NetworkManager:
@@ -76,8 +74,9 @@ class NetworkManager:
                 image.size -= len(recv_data)
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
-                    self.image_storage.save(image_dto.image,
-                                            self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp.strftime('%F %T.%f'))
+                    camera_uuid = self.camera_manager.uuid_for_addr(addr)
+                    image_name = camera_uuid + "_" + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
+                    self.image_storage.save(image_dto.image, image_name)
 
-                    image_dto.image.save(self.camera_manager.uuid_for_addr(addr) + "_" + image_dto.timestamp.strftime('%F %T.%f') + '.jpg')
+                    image_dto.image.save(image_name + '.jpg')
                     self.camera_manager.update_image(addr, ImageRawData())
