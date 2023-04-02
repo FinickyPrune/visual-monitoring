@@ -8,6 +8,8 @@ from PIL import Image
 from server.image_storage.image_storage_interface import ImageStorageInterface
 from pathlib import Path
 
+from utils.constants import DELIMITER
+
 
 class HDF5ImageStorage(ImageStorageInterface):
 
@@ -21,7 +23,7 @@ class HDF5ImageStorage(ImageStorageInterface):
 
     def save(self, image, name):
         count = len(os.listdir(self.hdf5_dir))
-        file_name = f"{count}_{name}.h5"
+        file_name = f"{count}{DELIMITER}{name}.h5"
         file = h5py.File(self.hdf5_dir / file_name, "w")
         file.create_dataset(
             "image", np.shape(image), h5py.h5t.STD_U8BE, data=image

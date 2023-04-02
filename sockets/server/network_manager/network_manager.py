@@ -7,7 +7,7 @@ import types
 from models.image import ImageRawData
 from server.camera_manager.camera_manager import CameraManager
 from server.image_storage.image_storage_interface import ImageStorageInterface
-from utils.constants import HOST, PORT, TIMESTAMP_FORMAT
+from utils.constants import HOST, PORT, TIMESTAMP_FORMAT, DELIMITER
 
 sel = selectors.DefaultSelector()
 
@@ -75,7 +75,7 @@ class NetworkManager:
                 if image.size == 0:
                     image_dto = pickle.loads(b''.join(image.image_bytes))
                     camera_uuid = self.camera_manager.uuid_for_addr(addr)
-                    image_name = camera_uuid + "_" + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
+                    image_name = camera_uuid + DELIMITER + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
                     self.image_storage.save(image_dto.image, image_name)
 
                     image_dto.image.save(image_name + '.jpg')
