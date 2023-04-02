@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import logging
 import os
 import numpy as np
@@ -8,7 +8,7 @@ from PIL import Image
 from server.image_storage.image_storage_interface import ImageStorageInterface
 from pathlib import Path
 
-from utils.constants import DELIMITER
+from utils.constants import DELIMITER, TIMESTAMP_FORMAT
 
 
 class HDF5ImageStorage(ImageStorageInterface):
@@ -40,6 +40,18 @@ class HDF5ImageStorage(ImageStorageInterface):
         images: [Image] = []
         file_names: [str] = []
         for file in os.listdir(self.hdf5_dir):
+            f = h5py.File(self.hdf5_dir / file, "r+")
+            images.append(Image.fromarray(np.array(f["/image"]).astype("uint8")))
+            file_names.append(file[:-3])
+        return images, file_names
+
+    def load_all_after(self, timestamp: datetime) -> ([Image], [str]):
+        images: [Image] = []
+        file_names: [str] = []
+        for file in os.listdir(self.hdf5_dir):
+            file_timestamp = datetime.strptime(Path(self.hdf5_dir / file).stem.split(DELIMITER)[2], TIMESTAMP_FORMAT)
+            if timestamp >= file_timestamp:
+                continue
             f = h5py.File(self.hdf5_dir / file, "r+")
             images.append(Image.fromarray(np.array(f["/image"]).astype("uint8")))
             file_names.append(file[:-3])
