@@ -25,8 +25,14 @@ class ImageBuffer:
         run_loop(return_after=timedelta(hours=LOOP_DURATION))
 
     def update_buffer(self):
-        timestamp = self.image_dtos[-1].timestamp
-        images, file_names = self.image_storage.load_all_after(timestamp)
+        images = []
+        file_names = []
+        if len(self.image_dtos) == 0:
+            images, file_names = self.image_storage.load_all()
+        else:
+            timestamp = self.image_dtos[-1].timestamp
+            images, file_names = self.image_storage.load_all_after(timestamp)
+
         for i in range(len(images)):
             timestamp: datetime = datetime.strptime(file_names[i].split(DELIMITER)[2], TIMESTAMP_FORMAT)
             self.image_dtos.append(ImageDto(timestamp, images[i]))

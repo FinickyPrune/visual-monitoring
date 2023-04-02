@@ -1,6 +1,6 @@
 
 #  image_buffer
-UPDATE_STORAGE_INTERVAL = 10  # seconds
+UPDATE_STORAGE_INTERVAL = 2  # seconds
 LOOP_DURATION = 1  # hours
 
 # client

@@ -78,5 +78,5 @@ class NetworkManager:
                     image_name = camera_uuid + DELIMITER + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
                     self.image_storage.save(image_dto.image, image_name)
 
-                    image_dto.image.save(image_name + '.jpg')
+                    # image_dto.image.save(image_name + '.jpg')
                     self.camera_manager.update_image(addr, ImageRawData())
