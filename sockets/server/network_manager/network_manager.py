@@ -9,6 +9,7 @@ from server.camera_manager.camera_manager import CameraManager
 from server.image_storage.image_storage_interface import ImageStorageInterface
 from utils.constants import HOST, PORT, TIMESTAMP_FORMAT, DELIMITER
 
+
 sel = selectors.DefaultSelector()
 
 
@@ -58,7 +59,10 @@ class NetworkManager:
             if raw_image.image_bytes is None:
                 image_length_bytes = sock.recv(4)
                 if image_length_bytes:
-                    self.camera_manager.update_image(addr, ImageRawData([], int.from_bytes(image_length_bytes, 'big')))
+                    self.camera_manager.update_image(
+                        addr,
+                        ImageRawData([], int.from_bytes(image_length_bytes, "big")),
+                    )
                 else:
                     logging.info(f"Closing connection to {sel.get_key(sock).data.addr}")
                     sel.unregister(sock)
@@ -73,9 +77,13 @@ class NetworkManager:
                 image.image_bytes.append(recv_data)
                 image.size -= len(recv_data)
                 if image.size == 0:
-                    image_dto = pickle.loads(b''.join(image.image_bytes))
+                    image_dto = pickle.loads(b"".join(image.image_bytes))
                     camera_uuid = self.camera_manager.uuid_for_addr(addr)
-                    image_name = camera_uuid + DELIMITER + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
+                    image_name = (
+                        camera_uuid
+                        + DELIMITER
+                        + image_dto.timestamp.strftime(TIMESTAMP_FORMAT)
+                    )
                     self.image_storage.save(image_dto.image, image_name)
 
                     # image_dto.image.save(image_name + '.jpg')

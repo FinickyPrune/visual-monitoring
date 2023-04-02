@@ -1,8 +1,8 @@
 import concurrent.futures
 import logging
-from network_manager.network_manager import NetworkManager
-from image_storage.image_storage_interface import ImageStorageInterface
-from image_storage.HDF5_image_storage import HDF5ImageStorage
+from server.network_manager.network_manager import NetworkManager
+from server.image_storage.image_storage_interface import ImageStorageInterface
+from server.image_storage.HDF5_image_storage import HDF5ImageStorage
 from server.image_buffer.image_buffer import ImageBuffer
 
 
@@ -29,6 +29,6 @@ class ServerRunner:
         pool.shutdown(wait=True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     server_runner = ServerRunner()

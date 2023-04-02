@@ -10,3 +10,5 @@ sockets/.idea
 sockets/data/hdf5
 
 *.pyc
+.gitignore
+camera_output

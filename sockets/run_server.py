@@ -1,6 +1,5 @@
 import logging
 
-from client.client import Client, start_generation
 from server.server_runner import ServerRunner
 
 if __name__ == "__main__":
