@@ -86,5 +86,5 @@ class NetworkManager:
                     )
                     self.image_storage.save(image_dto.image, image_name)
 
-                    # image_dto.image.save(image_name + '.jpg')
+                    # image_dto.image.save(image_name + '.png')
                     self.camera_manager.update_image(addr, ImageRawData())

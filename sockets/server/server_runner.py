@@ -27,8 +27,3 @@ class ServerRunner:
 
         # wait for all tasks to complete
         pool.shutdown(wait=True)
-
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
-    server_runner = ServerRunner()
