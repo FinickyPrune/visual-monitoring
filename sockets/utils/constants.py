@@ -4,7 +4,7 @@ LOOP_DURATION = 1  # hours
 
 # client
 # CAMERA_OUTPUT_PATH = "/Users/tjest/Desktop/vscode/python/duckietown/camera_output/"
-CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output"
+CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output/"
 BYTE_CHUNK = 4096
 
 HOST = "127.0.0.1"  # The server's hostname or IP address

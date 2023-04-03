@@ -51,6 +51,6 @@ def start_generation():
     rsg = RedSquareGenerator()
     i = 0
     for image in rsg.generate():
-        image.save(f"{CAMERA_OUTPUT_PATH}/image_{i}.png")
+        image.save(f"{CAMERA_OUTPUT_PATH}image_{i}.png")
         i += 1
     logging.info("Finished generating.")
