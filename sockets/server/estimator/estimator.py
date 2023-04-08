@@ -1,9 +1,10 @@
 import logging
 
-from server.objects_recognizer.recognizable_object.recognizable_object_interface import RecognizableObjectInterface
+from server.objects_recognizer.recognizable_object.recognizable_object_interface import (
+    RecognizableObjectInterface,
+)
 
 
 class Estimator:
-
-    def estimate(self, objects: [RecognizableObjectInterface]):
+    def estimate(self, objects: list[RecognizableObjectInterface]):
         logging.debug("Estimating...")

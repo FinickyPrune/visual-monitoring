@@ -3,8 +3,8 @@ UPDATE_STORAGE_INTERVAL = 30  # seconds
 LOOP_DURATION = 1  # hours
 
 # client
-# CAMERA_OUTPUT_PATH = "/Users/tjest/Desktop/vscode/python/duckietown/camera_output/"
-CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output/"
+CAMERA_OUTPUT_PATH = "/Users/tjest/Desktop/vscode/python/duckietown/camera_output/"
+# CAMERA_OUTPUT_PATH = "/Users/anastasiakravcenko/Desktop/camera_output/"
 BYTE_CHUNK = 4096
 IMAGE_WIDTH = 960
 IMAGE_HEIGHT = 576
