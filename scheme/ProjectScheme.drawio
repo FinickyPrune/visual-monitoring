@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-20T16:53:04.792Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="KMmiQNEA_qnalMvOLvFh" version="21.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-20T16:58:05.419Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="zV5LbND1m4JthvXAOHOV" version="21.2.1" type="github">
   <diagram id="1c3a3Ne5sWxcKdT_-n9J" name="Page-1">
     <mxGraphModel dx="2261" dy="1996" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -250,28 +250,31 @@
         <mxCell id="ZjCnevx82HWG5ks_SKBf-7" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1504" y="670" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-3" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-7" vertex="1">
+        <mxCell id="C4SxxqwkV0TnyVvPlaCq-30" value="" style="group" vertex="1" connectable="0" parent="ZjCnevx82HWG5ks_SKBf-7">
+          <mxGeometry width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-3" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" parent="C4SxxqwkV0TnyVvPlaCq-30" vertex="1">
           <mxGeometry width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-4" value="Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-7" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-4" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="C4SxxqwkV0TnyVvPlaCq-30" vertex="1">
           <mxGeometry y="40" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-8" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1670" y="670" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-1" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-8" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-1" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-8" vertex="1">
           <mxGeometry width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-2" value="Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-8" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-2" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-8" vertex="1">
           <mxGeometry y="40" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-9" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1840" y="670" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-5" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-9" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-5" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-9" vertex="1">
           <mxGeometry width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-6" value="Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-9" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-6" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-9" vertex="1">
           <mxGeometry y="40" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-10" value="Wireless/LAN network" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
