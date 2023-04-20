@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-20T12:18:43.907Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="20j0x4-0m1Qt6--0O5NK" version="21.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-20T12:39:36.517Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="lGdZKkitU4Yw8qvKy-9m" version="21.1.9" type="github">
   <diagram id="1c3a3Ne5sWxcKdT_-n9J" name="Page-1">
-    <mxGraphModel dx="1781" dy="1816" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1622" dy="1708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -278,7 +278,7 @@
           <mxGeometry x="1504" y="600" width="486" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1485" y="-20" width="520" height="540" as="geometry" />
+          <mxGeometry x="1485" y="-260" width="520" height="780" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="ZjCnevx82HWG5ks_SKBf-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -374,8 +374,21 @@
         <mxCell id="ZjCnevx82HWG5ks_SKBf-40" value="Cloud Storage" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ZjCnevx82HWG5ks_SKBf-41" vertex="1">
           <mxGeometry x="65" y="45" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-42" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-42" value="Image Syncronizer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="1525" y="50" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="syLTJeoGsTnQ-UvWIZXQ-3" value="Robot Recognizer Interface" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="-30" width="430" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="syLTJeoGsTnQ-UvWIZXQ-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.533;exitY=0.013;exitDx=0;exitDy=0;entryX=0.534;entryY=0.993;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="ZjCnevx82HWG5ks_SKBf-42" target="syLTJeoGsTnQ-UvWIZXQ-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1710" y="120" as="sourcePoint" />
+            <mxPoint x="1760" y="70" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="syLTJeoGsTnQ-UvWIZXQ-5" value="Route Estimation&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1530" y="-110" width="430" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
