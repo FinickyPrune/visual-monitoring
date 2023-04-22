@@ -9,12 +9,17 @@ from models.image import ImageDto
 from server.image_storage.image_storage_interface import ImageStorageInterface
 from server.observer_interface.observer import Subject, Observer
 from server.sync_manager.sync_manager import SyncManager
-from utils.constants import UPDATE_STORAGE_INTERVAL, LOOP_DURATION, TIMESTAMP_FORMAT, DELIMITER, BUFFER_CHUNK
+from utils.constants import (
+    UPDATE_STORAGE_INTERVAL,
+    LOOP_DURATION,
+    TIMESTAMP_FORMAT,
+    DELIMITER, BUFFER_CHUNK,
+)
 
 
 class ImageBuffer(Subject):
     image_storage: ImageStorageInterface
-    image_dtos: [ImageDto] = []
+    image_dtos: list[ImageDto] = []
 
     observers: List[Observer] = []
 
@@ -23,7 +28,9 @@ class ImageBuffer(Subject):
         self.observers.append(observer)
         images, file_names = self.image_storage.load_all()
         for i in range(len(images)):
-            timestamp: datetime = datetime.strptime(file_names[i].split(DELIMITER)[2], TIMESTAMP_FORMAT)
+            timestamp: datetime = datetime.strptime(
+                file_names[i].split(DELIMITER)[2], TIMESTAMP_FORMAT
+            )
             self.image_dtos.append(ImageDto(timestamp, images[i]))
         SyncManager.sort_images(self.image_dtos)
         if len(self.image_dtos) >= BUFFER_CHUNK:
@@ -41,7 +48,9 @@ class ImageBuffer(Subject):
             images, file_names = self.image_storage.load_all_after(timestamp)
 
         for i in range(len(images)):
-            timestamp: datetime = datetime.strptime(file_names[i].split(DELIMITER)[2], TIMESTAMP_FORMAT)
+            timestamp: datetime = datetime.strptime(
+                file_names[i].split(DELIMITER)[2], TIMESTAMP_FORMAT
+            )
             self.image_dtos.append(ImageDto(timestamp, images[i]))
         SyncManager.sort_images(self.image_dtos)
         if len(self.image_dtos) >= BUFFER_CHUNK:

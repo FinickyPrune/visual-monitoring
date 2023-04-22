@@ -17,7 +17,7 @@ class Estimator(Observer, Subject, ABC):
     def __init__(self, observer):
         self.observers.append(observer)
 
-    def estimate(self, objects: [RecognizableObjectInterface]):
+    def estimate(self, objects: list[RecognizableObjectInterface]):
         logging.debug("Estimating...")
         self.ideal_path = []
         self.real_path = []

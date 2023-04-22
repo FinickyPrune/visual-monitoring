@@ -1,10 +1,15 @@
+from math import ceil, floor
 import os
 import pickle
 import socket
 import logging
+from time import sleep
+from typing import Generator, Tuple
 
 from PIL import Image
 from datetime import datetime
+
+import numpy as np
 
 from models.image import ImageDto
 from utils.constants import HOST, PORT, CAMERA_OUTPUT_PATH, BYTE_CHUNK
@@ -46,6 +51,6 @@ class Client:
         self.socket.send(dto_length_bytes)
 
         for i in range(0, len(dto_dump), BYTE_CHUNK):
-            self.socket.send(dto_dump[i: i + BYTE_CHUNK])
+            self.socket.send(dto_dump[i : i + BYTE_CHUNK])
 
         logging.info(f"{path} sent.")
