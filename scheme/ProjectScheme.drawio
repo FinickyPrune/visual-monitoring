@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-29T04:36:18.963Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="K2E4C0iwHuetz3F7VJha" version="21.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-29T04:40:06.542Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="l2-Wn0jv9zDo9zwq6mcs" version="21.2.1" type="github">
   <diagram id="1c3a3Ne5sWxcKdT_-n9J" name="Page-1">
-    <mxGraphModel dx="1510" dy="1563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1816" dy="1739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -277,7 +277,7 @@
         <mxCell id="ZjCnevx82HWG5ks_SKBf-6" value="Camera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="ZjCnevx82HWG5ks_SKBf-9" vertex="1">
           <mxGeometry y="40" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-10" value="Wireless/LAN network" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-10" value="Wireless/LAN network" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="1504" y="600" width="486" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
@@ -331,7 +331,7 @@
             <mxPoint x="1890" y="540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-26" value="" style="group" parent="1" vertex="1" connectable="0">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-26" value="" style="group;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="1540" y="460" width="420" height="40" as="geometry" />
         </mxCell>
         <mxCell id="ZjCnevx82HWG5ks_SKBf-24" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="ZjCnevx82HWG5ks_SKBf-26" vertex="1">
@@ -381,7 +381,7 @@
         <mxCell id="wI4qdfxFNktkU_OVBzct-21" value="" style="whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="ZjCnevx82HWG5ks_SKBf-35">
           <mxGeometry x="660.5" width="84" height="83" as="geometry" />
         </mxCell>
-        <mxCell id="ZjCnevx82HWG5ks_SKBf-42" value="Image Syncronizer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ZjCnevx82HWG5ks_SKBf-42" value="Image Syncronizer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="1525" y="150" width="440" height="50" as="geometry" />
         </mxCell>
         <mxCell id="h5YYhdJYxk_MrRawlM-W-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="syLTJeoGsTnQ-UvWIZXQ-3" target="syLTJeoGsTnQ-UvWIZXQ-5" edge="1">
@@ -445,7 +445,7 @@
         <mxCell id="C4SxxqwkV0TnyVvPlaCq-16" value="real_path (Array&amp;lt;Coordinates&amp;gt;)" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#333333;" parent="C4SxxqwkV0TnyVvPlaCq-14" vertex="1">
           <mxGeometry y="70" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="C4SxxqwkV0TnyVvPlaCq-20" value="Image Buffer" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="C4SxxqwkV0TnyVvPlaCq-20" value="Image Buffer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="1525" y="230" width="440" height="50" as="geometry" />
         </mxCell>
         <mxCell id="C4SxxqwkV0TnyVvPlaCq-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.356;exitY=-0.002;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="ZjCnevx82HWG5ks_SKBf-27" edge="1">
