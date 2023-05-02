@@ -1,7 +1,7 @@
 from datetime import datetime
+from typing import List
 
 
 class RecognizableObjectInterface:
-
     timestamp: datetime
-    coordinates: [float]
+    coordinates: List[float]

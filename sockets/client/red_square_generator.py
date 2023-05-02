@@ -1,5 +1,4 @@
 import logging
-from math import ceil, floor
 from time import sleep
 from typing import Generator
 from typing import Tuple
@@ -18,35 +17,29 @@ class RedSquareGenerator:
     ):
         self.__image_size: int = image_size
         self.__target_count: int = square_count
-        self.__h, self.__w = square_size
+        self.__sq_h, self.__sq_w = square_size
 
     def generate(self) -> Generator[None, None, Image.Image]:
-        shift = self.__image_size[1] / self.__target_count
         RED = np.array((255, 0, 0), dtype=np.uint8)
+        BLACK = np.array((0, 0, 0), dtype=np.uint8)
+        START_POSITION = (0, 0)
+
+        y_s, x_s = START_POSITION
 
         for i in range(self.__target_count):
-            sleep(0.2)
-
-            im = Image.new("RGB", self.__image_size, "black")
+            im = Image.new("RGB", self.__image_size, "white")
             pixels = im.load()
-            i_shifted = i * shift
-            current_x, next_x = floor(i_shifted), ceil(i_shifted)
-            first_density = i_shifted - current_x
-            last_density = next_x - i_shifted
 
-            for y in range(self.__h):
-                pixels[y, int(current_x)] = tuple(
-                    np.array(RED * first_density, dtype=np.uint8)
+            for y in range(self.__sq_h):
+                for x in range(self.__sq_w - 1):
+                    pixels[y_s + y, x_s + x + i] = tuple(np.array(RED, dtype=np.uint8))
+                pixels[y_s + y, x_s + x + 1 + i] = tuple(
+                    np.array(BLACK, dtype=np.uint8)
                 )
-                for x in range(1, self.__w - 1):
-                    pixels[
-                        y, min(int(current_x + x), self.__image_size[0] - 1)
-                    ] = tuple(RED)
-                pixels[
-                    y, min(int(current_x + self.__w - 1), self.__image_size[0] - 1)
-                ] = tuple(np.array(RED * last_density, dtype=np.uint8))
 
             yield im
+
+            sleep(1)
 
 
 def start_generation():

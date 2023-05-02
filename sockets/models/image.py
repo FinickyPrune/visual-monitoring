@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
-from PIL import Image
+from typing import Optional
+from PIL.Image import Image
 
 
 @dataclass
@@ -8,9 +9,8 @@ class ImageDto:
     timestamp: datetime
     image: Image
 
+
 @dataclass
 class ImageRawData:
-    image_bytes: [] = None
+    image_bytes: Optional[bytes] = None
     size: int = 0
-
-

@@ -3,16 +3,17 @@ from abc import ABC
 from typing import List
 
 from server.objects_recognizer.objects_recognizer import ObjectRecognizer
-from server.objects_recognizer.recognizable_object.recognizable_object_interface import RecognizableObjectInterface
+from server.objects_recognizer.recognizable_object.recognizable_object_interface import (
+    RecognizableObjectInterface,
+)
 from server.observer_interface.observer import Observer, Subject
 
 
 class Estimator(Observer, Subject, ABC):
-
     observers: List[Observer] = []
 
-    ideal_path: [[float]] = []
-    real_path: [[float]] = []
+    ideal_path: List[List[float]] = []
+    real_path: List[List[float]] = []
 
     def __init__(self, observer):
         self.observers.append(observer)
