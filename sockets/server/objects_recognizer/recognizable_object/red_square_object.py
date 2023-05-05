@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import List
 
-from attr import dataclass
+from dataclasses import dataclass
 
 from server.objects_recognizer.recognizable_object.recognizable_object_interface import (
     RecognizableObjectInterface,
