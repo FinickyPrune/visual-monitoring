@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-24T15:37:49.980Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="xmwVzDFzBfEoXQv3nXjj" version="21.3.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-24T17:41:28.798Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="v09mQHQIjZ6AE_vRXvYN" version="21.3.2" type="github" pages="3">
   <diagram id="1c3a3Ne5sWxcKdT_-n9J" name="Page-1">
-    <mxGraphModel dx="1622" dy="1708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1510" dy="1563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -536,13 +536,61 @@
           <mxGeometry x="55" y="16.46428571428572" width="60" height="49.392857142857146" as="geometry" />
         </mxCell>
         <mxCell id="-tSNQlVazqDpAbZCUM5G-8" value="Establishing TCP connection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3160" y="490" width="160" height="30" as="geometry" />
+          <mxGeometry x="3187.5" y="500" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-tSNQlVazqDpAbZCUM5G-9" value="Initializing NetworkManager &amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="3100" y="417.5" width="290" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-tSNQlVazqDpAbZCUM5G-10" value="Starting listening/accepting connections" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="3130" y="450" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-11" value="Launching &amp;nbsp;Client" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3470" y="417.5" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-12" value="Trying to connect to Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3420" y="440" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-13" value="Establishing TCP connection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3452.5" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-14" value="Sending data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3460" y="600" width="145" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-15" value="Receiving data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3180" y="600" width="175" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-16" value="Closing connection on timeout" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3140" y="693.13" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-17" value="Storing Client&#39;s IP&lt;br&gt;Generating unique camera id" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3177.5" y="540" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-20" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="3360" y="623" as="geometry" />
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="-tSNQlVazqDpAbZCUM5G-20" source="-tSNQlVazqDpAbZCUM5G-14" target="-tSNQlVazqDpAbZCUM5G-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="7" as="sourcePoint" />
+            <mxPoint x="70" y="-43" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="-tSNQlVazqDpAbZCUM5G-20" target="-tSNQlVazqDpAbZCUM5G-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint as="sourcePoint" />
+            <mxPoint x="90" y="7" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-24" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="-tSNQlVazqDpAbZCUM5G-13" target="-tSNQlVazqDpAbZCUM5G-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="3390" y="560" as="sourcePoint" />
+            <mxPoint x="3440" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-tSNQlVazqDpAbZCUM5G-25" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="-tSNQlVazqDpAbZCUM5G-8" target="-tSNQlVazqDpAbZCUM5G-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="3390" y="580" as="sourcePoint" />
+            <mxPoint x="3440" y="530" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
