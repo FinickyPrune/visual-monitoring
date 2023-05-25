@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-25T18:29:57.976Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="NID6_33XyaQ2Q2DQHtGC" version="21.3.4" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-25T18:36:42.227Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.2 Safari/605.1.15" etag="FPqIAXbYljHa5vNhxtjX" version="21.3.4" type="github" pages="3">
   <diagram id="1c3a3Ne5sWxcKdT_-n9J" name="Page-1">
     <mxGraphModel dx="2022" dy="1858" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -683,7 +683,7 @@
         <mxCell id="JJhFcIn-mRqj0yUtWq2C-3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="JJhFcIn-mRqj0yUtWq2C-7">
           <mxGeometry width="250" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="JJhFcIn-mRqj0yUtWq2C-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Client is taking picture&lt;br&gt;Wrapping picture into package&lt;br&gt;Sending package to Server&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JJhFcIn-mRqj0yUtWq2C-7">
+        <mxCell id="JJhFcIn-mRqj0yUtWq2C-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Client is taking picture&lt;br&gt;Cashing picture&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="JJhFcIn-mRqj0yUtWq2C-7">
           <mxGeometry x="11" width="230" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JJhFcIn-mRqj0yUtWq2C-11" value="Storing images" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
@@ -780,8 +780,11 @@
         <mxCell id="JJhFcIn-mRqj0yUtWq2C-141" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1160" y="1540" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="JJhFcIn-mRqj0yUtWq2C-142" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="JJhFcIn-mRqj0yUtWq2C-142" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1690" y="1540" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JJhFcIn-mRqj0yUtWq2C-143" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Wrapping picture into package&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Sending package to Server&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1528" y="1410" width="202" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
