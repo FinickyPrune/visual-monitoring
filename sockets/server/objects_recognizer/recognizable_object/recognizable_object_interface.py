@@ -5,3 +5,4 @@ from typing import List
 class RecognizableObjectInterface:
     timestamp: datetime
     coordinates: List[float]
+    towards: List[float]

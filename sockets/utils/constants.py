@@ -17,4 +17,4 @@ TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S.%f"
 DELIMITER = "_"
 
 # buffer chunk
-BUFFER_CHUNK = 5
+BUFFER_CHUNK = 15
