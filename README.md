@@ -3,5 +3,5 @@
 This is Visual Monitoring System consisting from two parts: client side and server side. 
 System is related to IEEE paper: <https://ieeexplore.ieee.org/document/10272883>
 
-The architecture of the system:
+The architecture of the system: (system_architecture.png)
 
